@@ -1847,3 +1847,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cube: {fileID: 844385780}
+  HitEffect: {fileID: 100672, guid: 7dc0b63f67faaf9479803bcfdff7f71e, type: 2}
+  HitEffect2: {fileID: 123640, guid: 9242b15a276bc5a4babd09239e5fa709, type: 2}

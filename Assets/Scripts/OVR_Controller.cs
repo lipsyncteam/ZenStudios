@@ -8,7 +8,8 @@ public class OVR_Controller : MonoBehaviour {
 
     private bool trigger_is;
     private RaycastHit HitInfo;
-    public GameObject Cube;
+    public GameObject Cube,HitEffect,HitEffect2;
+
 	void Start ()
     {
         
@@ -26,11 +27,19 @@ public class OVR_Controller : MonoBehaviour {
             if(HitInfo.collider.tag == "Scroll")
             {
                 Cube.GetComponent<Renderer>().material.color = Color.red;
-            }else
+                Instantiate(HitEffect, OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), Quaternion.identity);
+            }
+            else
             {
                 Cube.GetComponent<Renderer>().material.color = Color.white;
 
             }
+
+        }
+
+        if(trigger_is == true)
+        {
+            Instantiate(HitEffect2, OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), Quaternion.identity);
         }
         print(trigger_is);
     }
