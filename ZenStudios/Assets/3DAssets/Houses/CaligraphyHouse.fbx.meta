@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 084f62fded13fc84c9c32d197a8443c9
+timeCreated: 1495074561
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CaligraphyHouse_MeshPart0
+    100004: CaligraphyHouse_MeshPart1
+    100006: CaligraphyHouse_MeshPart2
+    100008: CaligraphyHouse_MeshPart3
+    100010: BackRoof
+    100012: BackWall
+    100014: Ceiling
+    100016: Corners
+    100018: Door
+    100020: Floor
+    100022: Mats
+    100024: Pictures
+    100026: Pillar
+    100028: polySurface69
+    100030: polySurface70
+    100032: Railings
+    100034: Roof
+    100036: RoofSupports
+    100038: RoofTiling
+    100040: SideRalings
+    100042: Walls
+    400000: //RootNode
+    400002: CaligraphyHouse_MeshPart0
+    400004: CaligraphyHouse_MeshPart1
+    400006: CaligraphyHouse_MeshPart2
+    400008: CaligraphyHouse_MeshPart3
+    400010: BackRoof
+    400012: BackWall
+    400014: Ceiling
+    400016: Corners
+    400018: Door
+    400020: Floor
+    400022: Mats
+    400024: Pictures
+    400026: Pillar
+    400028: polySurface69
+    400030: polySurface70
+    400032: Railings
+    400034: Roof
+    400036: RoofSupports
+    400038: RoofTiling
+    400040: SideRalings
+    400042: Walls
+    2300000: CaligraphyHouse_MeshPart0
+    2300002: CaligraphyHouse_MeshPart1
+    2300004: CaligraphyHouse_MeshPart2
+    2300006: CaligraphyHouse_MeshPart3
+    2300008: BackRoof
+    2300010: BackWall
+    2300012: Ceiling
+    2300014: Corners
+    2300016: Door
+    2300018: Floor
+    2300020: Mats
+    2300022: Pictures
+    2300024: Pillar
+    2300026: polySurface69
+    2300028: polySurface70
+    2300030: Railings
+    2300032: Roof
+    2300034: RoofSupports
+    2300036: RoofTiling
+    2300038: SideRalings
+    2300040: Walls
+    3300000: CaligraphyHouse_MeshPart0
+    3300002: CaligraphyHouse_MeshPart1
+    3300004: CaligraphyHouse_MeshPart2
+    3300006: CaligraphyHouse_MeshPart3
+    3300008: BackRoof
+    3300010: BackWall
+    3300012: Ceiling
+    3300014: Corners
+    3300016: Door
+    3300018: Floor
+    3300020: Mats
+    3300022: Pictures
+    3300024: Pillar
+    3300026: polySurface69
+    3300028: polySurface70
+    3300030: Railings
+    3300032: Roof
+    3300034: RoofSupports
+    3300036: RoofTiling
+    3300038: SideRalings
+    3300040: Walls
+    4300000: CaligraphyHouse_MeshPart0
+    4300002: CaligraphyHouse_MeshPart1
+    4300004: CaligraphyHouse_MeshPart2
+    4300006: CaligraphyHouse_MeshPart3
+    4300008: BackWall
+    4300010: Pictures
+    4300012: Ceiling
+    4300014: Mats
+    4300016: RoofTiling
+    4300018: polySurface69
+    4300020: polySurface70
+    4300022: Door
+    4300024: Pillar
+    4300026: Roof
+    4300028: Floor
+    4300030: Walls
+    4300032: RoofSupports
+    4300034: Corners
+    4300036: Railings
+    4300038: SideRalings
+    4300040: BackRoof
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
