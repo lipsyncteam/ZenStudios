@@ -218,8 +218,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: W:/Zen Studio key/Chinese Language Learning.keystore
+  AndroidKeyaliasName: zenstudios
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 1
