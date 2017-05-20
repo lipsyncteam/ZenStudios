@@ -2,45 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OVR_Controller : MonoBehaviour {
-
-
-
-    private bool trigger_is;
-    private RaycastHit HitInfo;
-    public GameObject Cube,HitEffect,HitEffect2;
-
-	void Start ()
+public class OVR_Controller : MonoBehaviour
+{
+ 
+    
+    public RaycastHit RayHitInfo;
+    public GameObject Brush;
+    void OVR_Controller_DrawFunc()
     {
-        
 
-    }
-	
-	
-	void Update ()
-    {
-        Vector3 forwardSight = transform.TransformDirection(transform.forward);
-        trigger_is = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger);
-        if(Physics.SphereCast(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote),1f,forwardSight, out HitInfo, 10f))
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
-            print(HitInfo.collider.gameObject);
-            if(HitInfo.collider.tag == "Scroll")
-            {
-                Cube.GetComponent<Renderer>().material.color = Color.red;
-                Instantiate(HitEffect, OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), Quaternion.identity);
-            }
-            else
-            {
-                Cube.GetComponent<Renderer>().material.color = Color.white;
 
-            }
+            if (Physics.Raycast(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), transform.forward, out RayHitInfo, 2.38f))
+            {
 
+                if (RayHitInfo.collider.tag == "Scroll" && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+                {
+                    this.transform.position = RayHitInfo.point;
+                    GetComponent<TrailRenderer>().enabled = true;
+                }
+                else
+                {
+                    ResetLineRenderer();
+
+
+                }
+            }
+        }
+        else
+        {
+           // ResetLineRenderer();
         }
 
-        if(trigger_is == true)
-        {
-            Instantiate(HitEffect2, OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), Quaternion.identity);
-        }
-        print(trigger_is);
+
+        Debug.DrawRay(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), transform.forward, Color.blue);
     }
+
+    private void ResetLineRenderer()
+    {
+        GetComponent<TrailRenderer>().enabled = false;
+        GetComponent<TrailRenderer>().Clear();
+    }
+
+    void ContollerPosition()
+    {
+        Brush.transform.position = OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote);
+    }
+
+    void Update ()
+    {
+        OVR_Controller_DrawFunc();
+        ContollerPosition();
+    }
+
+    
 }

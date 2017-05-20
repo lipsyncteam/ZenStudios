@@ -32,7 +32,7 @@ public class Post_Processing_Image_Effects : MonoBehaviour {
 		Copy_of_Vignette.smoothness = 0.55f;
 		ImageEffects_Profile.vignette.settings = Copy_of_Vignette;
 
-		Invoke ("InvokeVignette_Intensity", 3f);
+		Invoke ("InvokeVignette_Intensity", 6f);
 	}
 
 	void Update()
