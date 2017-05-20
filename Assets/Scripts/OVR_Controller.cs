@@ -11,13 +11,13 @@ public class OVR_Controller : MonoBehaviour
     void OVR_Controller_DrawFunc()
     {
 
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
 
             if (Physics.Raycast(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), transform.forward, out RayHitInfo, 2.38f))
             {
 
-                if (RayHitInfo.collider.tag == "Scroll" && OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
+                if (RayHitInfo.collider.tag == "Scroll")
                 {
                     this.transform.position = RayHitInfo.point;
                     GetComponent<TrailRenderer>().enabled = true;
@@ -54,6 +54,12 @@ public class OVR_Controller : MonoBehaviour
     {
         OVR_Controller_DrawFunc();
         ContollerPosition();
+
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKey(KeyCode.R))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+
     }
 
     

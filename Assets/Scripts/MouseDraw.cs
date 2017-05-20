@@ -54,5 +54,10 @@ public class MouseDraw : MonoBehaviour
 #if UNITY_EDITOR
         MouseDrawFunc();
 #endif
+
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKey(KeyCode.R))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 }
