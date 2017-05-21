@@ -11,10 +11,10 @@ public class OVR_Controller : MonoBehaviour
     void OVR_Controller_DrawFunc()
     {
 
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
         {
 
-            if (Physics.Raycast(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), transform.forward, out RayHitInfo, 2.38f))
+            if (Physics.Raycast(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Active), transform.forward, out RayHitInfo, 2.38f))
             {
 
                 if (RayHitInfo.collider.tag == "Scroll")
@@ -36,7 +36,7 @@ public class OVR_Controller : MonoBehaviour
         }
 
 
-        Debug.DrawRay(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote), transform.forward, Color.blue);
+        Debug.DrawRay(OVRInput.GetLocalControllerPosition(OVRInput.Controller.Active), transform.forward, Color.blue);
     }
 
     private void ResetLineRenderer()
@@ -47,7 +47,8 @@ public class OVR_Controller : MonoBehaviour
 
     void ContollerPosition()
     {
-        Brush.transform.position = OVRInput.GetLocalControllerPosition(OVRInput.Controller.Remote);
+        Brush.transform.position = OVRInput.GetLocalControllerPosition(OVRInput.Controller.Active);
+        
     }
 
     void Update ()
@@ -55,10 +56,10 @@ public class OVR_Controller : MonoBehaviour
         OVR_Controller_DrawFunc();
         ContollerPosition();
 
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKey(KeyCode.R))
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+       // if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKey(KeyCode.R))
+       // {
+       //     Application.LoadLevel(Application.loadedLevel);
+      //  }
 
     }
 

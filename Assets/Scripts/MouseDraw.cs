@@ -55,9 +55,6 @@ public class MouseDraw : MonoBehaviour
         MouseDrawFunc();
 #endif
 
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) || Input.GetKey(KeyCode.R))
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+     
     }
 }
