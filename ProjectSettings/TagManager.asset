@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Scroll
   - TrailRenderer
+  - BgScroll
+  - CharacterCollides
   layers:
   - Default
   - TransparentFX

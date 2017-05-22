@@ -8,38 +8,46 @@ public class MouseDraw : MonoBehaviour
 
     public GameObject DrawPlaceBrush;
     public RaycastHit RayHitInfo;
-   
-   
+    
     void MouseDrawFunc()
     {
 
         if (Input.GetMouseButton(0))
         {
-           
-            if(Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, 2.38f))
+           if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, 2.38f))
             {
-                
-                if(RayHitInfo.collider.tag == "Scroll")
+                if (RayHitInfo.collider.tag == "Scroll")
                 {
-                  this.transform.position = RayHitInfo.point;
-                  GetComponent<TrailRenderer>().enabled = true;
+                    this.transform.position = RayHitInfo.point;
+                    GetComponent<TrailRenderer>().enabled = true;
                 }
-                else
+              
+            }
+          else
+            {
+                ResetLineRenderer();
+            }
+
+            if (Physics.SphereCast(DrawPlaceBrush.transform.position,0.1f, DrawPlaceBrush.transform.forward, out RayHitInfo, 100f))
+            {
+                if (RayHitInfo.collider.tag == "CharacterCollides")
                 {
-                    ResetLineRenderer();
-
-
+                  
+                    RayHitInfo.collider.gameObject.SetActive(false);
                 }
             }
+
         }
-        else
+        else 
         {
-           
-           // ResetLineRenderer();
+          //ResetLineRenderer();
         }
         
-
+        
         Debug.DrawRay(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward,Color.green);
+
+       
+
     }
 
 
