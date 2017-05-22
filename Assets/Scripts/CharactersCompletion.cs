@@ -25,8 +25,7 @@ public class CharactersCompletion : MonoBehaviour
         if (Box_Coll.Length == 1 && OncePlayed == false)
         {
             OncePlayed = true;
-            Character.GetComponent<Image>().sprite = CharctersRight;
-            Invoke("CharacterBeforeEffectFunc", 0.5f);
+            Invoke("CharacterBeforeEffectFunc", 0.2f);
             Invoke("ShowCharacterImage", 1f);
         }
 
