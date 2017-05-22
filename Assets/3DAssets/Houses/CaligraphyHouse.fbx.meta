@@ -27,6 +27,8 @@ ModelImporter:
     100038: RoofTiling
     100040: SideRalings
     100042: Walls
+    100044: CaligraphyHouse:CaligraphyHouse_MeshPart0
+    100046: CaligraphyHouse:CaligraphyHouse_MeshPart1
     400000: //RootNode
     400002: CaligraphyHouse_MeshPart0
     400004: CaligraphyHouse_MeshPart1
@@ -49,6 +51,8 @@ ModelImporter:
     400038: RoofTiling
     400040: SideRalings
     400042: Walls
+    400044: CaligraphyHouse:CaligraphyHouse_MeshPart0
+    400046: CaligraphyHouse:CaligraphyHouse_MeshPart1
     2300000: CaligraphyHouse_MeshPart0
     2300002: CaligraphyHouse_MeshPart1
     2300004: CaligraphyHouse_MeshPart2
@@ -70,6 +74,8 @@ ModelImporter:
     2300036: RoofTiling
     2300038: SideRalings
     2300040: Walls
+    2300042: CaligraphyHouse:CaligraphyHouse_MeshPart0
+    2300044: CaligraphyHouse:CaligraphyHouse_MeshPart1
     3300000: CaligraphyHouse_MeshPart0
     3300002: CaligraphyHouse_MeshPart1
     3300004: CaligraphyHouse_MeshPart2
@@ -91,6 +97,8 @@ ModelImporter:
     3300036: RoofTiling
     3300038: SideRalings
     3300040: Walls
+    3300042: CaligraphyHouse:CaligraphyHouse_MeshPart0
+    3300044: CaligraphyHouse:CaligraphyHouse_MeshPart1
     4300000: CaligraphyHouse_MeshPart0
     4300002: CaligraphyHouse_MeshPart1
     4300004: CaligraphyHouse_MeshPart2
@@ -112,6 +120,8 @@ ModelImporter:
     4300036: Railings
     4300038: SideRalings
     4300040: BackRoof
+    4300042: CaligraphyHouse:CaligraphyHouse_MeshPart0
+    4300044: CaligraphyHouse:CaligraphyHouse_MeshPart1
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -144,7 +154,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -156,8 +166,8 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
-    tangentImportMode: 3
+    normalImportMode: 0
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
