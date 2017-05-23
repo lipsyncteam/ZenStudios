@@ -8,6 +8,7 @@ TagManager:
   - TrailRenderer
   - BgScroll
   - CharacterCollides
+  - Start
   layers:
   - Default
   - TransparentFX

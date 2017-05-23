@@ -8,6 +8,8 @@ public class EditorMousetoGearVR : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("TrailRenderer").GetComponent<OVR_Controller>().enabled = false;
         GameObject.FindGameObjectWithTag("TrailRenderer").GetComponent<MouseDraw>().enabled = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<OVRMenu>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MouseLevelScript>().enabled = true;
     }
 
     [MenuItem("LipSync GearVR/Mouse Disable")]
@@ -15,6 +17,9 @@ public class EditorMousetoGearVR : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("TrailRenderer").GetComponent<OVR_Controller>().enabled = true;
         GameObject.FindGameObjectWithTag("TrailRenderer").GetComponent<MouseDraw>().enabled = false;
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<OVRMenu>().enabled = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MouseLevelScript>().enabled = false;
     }
 
     [MenuItem("LipSync GearVR/Time 60FPS")]

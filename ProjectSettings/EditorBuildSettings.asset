@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ZenStudiosMainMenu.unity
+    guid: 09de3008f20be4b4fbd70bb4b43f2e37
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 00000000000000000000000000000000
