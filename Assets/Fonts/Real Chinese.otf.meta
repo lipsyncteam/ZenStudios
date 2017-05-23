@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e55eadb653d8b814fa04f3fb9c57ed16
+timeCreated: 1495582932
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Real Chinese
+  fontNames:
+  - Real Chinese
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
