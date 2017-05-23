@@ -29,6 +29,11 @@ ModelImporter:
     100042: Walls
     100044: CaligraphyHouse:CaligraphyHouse_MeshPart0
     100046: CaligraphyHouse:CaligraphyHouse_MeshPart1
+    100048: Boarders
+    100050: Boarders_MeshPart0
+    100052: Boarders_MeshPart1
+    100054: Pillars
+    100056: RestofHouse
     400000: //RootNode
     400002: CaligraphyHouse_MeshPart0
     400004: CaligraphyHouse_MeshPart1
@@ -53,6 +58,11 @@ ModelImporter:
     400042: Walls
     400044: CaligraphyHouse:CaligraphyHouse_MeshPart0
     400046: CaligraphyHouse:CaligraphyHouse_MeshPart1
+    400048: Boarders
+    400050: Boarders_MeshPart0
+    400052: Boarders_MeshPart1
+    400054: Pillars
+    400056: RestofHouse
     2300000: CaligraphyHouse_MeshPart0
     2300002: CaligraphyHouse_MeshPart1
     2300004: CaligraphyHouse_MeshPart2
@@ -76,6 +86,10 @@ ModelImporter:
     2300040: Walls
     2300042: CaligraphyHouse:CaligraphyHouse_MeshPart0
     2300044: CaligraphyHouse:CaligraphyHouse_MeshPart1
+    2300046: Boarders_MeshPart0
+    2300048: Boarders_MeshPart1
+    2300050: Pillars
+    2300052: RestofHouse
     3300000: CaligraphyHouse_MeshPart0
     3300002: CaligraphyHouse_MeshPart1
     3300004: CaligraphyHouse_MeshPart2
@@ -99,6 +113,10 @@ ModelImporter:
     3300040: Walls
     3300042: CaligraphyHouse:CaligraphyHouse_MeshPart0
     3300044: CaligraphyHouse:CaligraphyHouse_MeshPart1
+    3300046: Boarders_MeshPart0
+    3300048: Boarders_MeshPart1
+    3300050: Pillars
+    3300052: RestofHouse
     4300000: CaligraphyHouse_MeshPart0
     4300002: CaligraphyHouse_MeshPart1
     4300004: CaligraphyHouse_MeshPart2
@@ -122,10 +140,14 @@ ModelImporter:
     4300040: BackRoof
     4300042: CaligraphyHouse:CaligraphyHouse_MeshPart0
     4300044: CaligraphyHouse:CaligraphyHouse_MeshPart1
+    4300046: Pillars
+    4300048: RestofHouse
+    4300050: Boarders_MeshPart0
+    4300052: Boarders_MeshPart1
     9500000: //RootNode
   materials:
-    importMaterials: 0
-    materialName: 0
+    importMaterials: 1
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4

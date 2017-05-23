@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bdc9366b44f6383409e4f3474d54ea28
+timeCreated: 1495491423
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dry Brush
+  fontNames:
+  - Dry Brush
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
