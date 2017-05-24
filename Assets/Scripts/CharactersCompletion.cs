@@ -22,7 +22,7 @@ public class CharactersCompletion : MonoBehaviour
     {
 
         Box_Coll = gameObject.GetComponentsInChildren<Transform>();
-        if (Box_Coll.Length == 1 && OncePlayed == false)
+        if (Box_Coll.Length == 2 && OncePlayed == false)
         {
             OncePlayed = true;
             Invoke("CharacterBeforeEffectFunc", 0.2f);

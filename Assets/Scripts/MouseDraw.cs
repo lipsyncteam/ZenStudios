@@ -19,7 +19,7 @@ public class MouseDraw : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
 
-            if (Physics.SphereCast(DrawPlaceBrush.transform.position, 0.1f, DrawPlaceBrush.transform.forward, out RayHitInfo, 100f))
+            if (Physics.SphereCast(DrawPlaceBrush.transform.position, 10f, DrawPlaceBrush.transform.forward, out RayHitInfo, 1000f))
             {
                 if (RayHitInfo.collider.tag == "CharacterCollides")
                 {
@@ -39,7 +39,7 @@ public class MouseDraw : MonoBehaviour
                 }
                 else
                 {
-                    ResetLineRenderer();
+                   // ResetLineRenderer();
                 }
 
             }
@@ -50,7 +50,7 @@ public class MouseDraw : MonoBehaviour
         }
         else 
         {
-          ResetLineRenderer();
+          //ResetLineRenderer();
         }
         
         

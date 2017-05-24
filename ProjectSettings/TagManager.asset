@@ -9,6 +9,10 @@ TagManager:
   - BgScroll
   - CharacterCollides
   - Start
+  - Settings
+  - ResetSettings
+  - Music
+  - Quit
   layers:
   - Default
   - TransparentFX
