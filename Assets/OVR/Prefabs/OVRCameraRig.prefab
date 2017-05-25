@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 114831416003246520}
   - component: {fileID: 114974325597984096}
-  - component: {fileID: 114520146466030724}
   - component: {fileID: 114353950389266840}
   m_Layer: 0
   m_Name: OVRCameraRig
@@ -663,27 +662,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrawPlaceBrush: {fileID: 1897533233559056}
---- !u!114 &114520146466030724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c4ee55e268060499bb6faca3e428cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DrawPlaceBrush: {fileID: 0}
-  progressBar: {fileID: 0}
-  progressBar_Image: {fileID: 0}
-  StartButton: {fileID: 0}
-  SettingsButton: {fileID: 0}
-  SettingsCloseButton: {fileID: 0}
-  StartButtonPressed: {fileID: 21300000, guid: 00b1ae38c4bc47f49adca3d6bac23f6f, type: 3}
-  StartButtonUP: {fileID: 21300000, guid: 057c508c4c1bd094d9320e5a3e8823ca, type: 3}
-  SettingsPanel: {fileID: 0}
-  MusicToggle: {fileID: 0}
 --- !u!114 &114831416003246520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -744,4 +722,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111a730a043c732419810f484e4dd97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Brush: {fileID: 0}
+  Brush: {fileID: 112276, guid: d9809c5e8418bb047bf2c8ba1d1a2cec, type: 2}
