@@ -28,4 +28,10 @@ public class EditorMousetoGearVR : MonoBehaviour
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.0166666f;
     }
+
+    [MenuItem("LipSync GearVR/VR Disable")]
+    static void VRDisable()
+    {
+        PlayerSettings.virtualRealitySupported = false;
+    }
 }
