@@ -17,6 +17,7 @@ TagManager:
   - OVRSettings
   - OVRMusic
   - OVRResetSettings
+  - OVRQuit
   layers:
   - Default
   - TransparentFX

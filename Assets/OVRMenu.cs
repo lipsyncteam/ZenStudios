@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.VR;
 
 public class OVRMenu : MonoBehaviour
 {
 
-   
+    private LineRenderer LR;
     public RaycastHit RayHitInfo;
     public GameObject Blast;
+   
   
     public GameObject progressBar;
     public Image progressBar_Image;
@@ -47,9 +49,9 @@ public class OVRMenu : MonoBehaviour
             MusicToggle.isOn = true;
         }
 
-        ///
-       
-        //
+        LR = GetComponent<LineRenderer>();
+        LR.SetPosition(0, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.0045f));
+
     }
 
     public void Level_One_Async()
@@ -64,14 +66,19 @@ public class OVRMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = transform.TransformDirection(OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTrackedRemote));
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
-        {
-           
+        Vector3 forward =  transform.TransformDirection(transform.forward);
 
-            if (Physics.Raycast(OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTrackedRemote), forward, out RayHitInfo, Mathf.Infinity))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+        {
+
+            
+            if (Physics.Raycast(transform.position, forward, out RayHitInfo, Mathf.Infinity))
             {
-                Instantiate(Blast, RayHitInfo.point, Quaternion.identity);
+                ///
+               
+              
+
+                //
                 if (RayHitInfo.collider.tag == "OVRStart")
                 {
                     StartButton.GetComponent<Image>().sprite = StartButtonPressed;
@@ -86,7 +93,7 @@ public class OVRMenu : MonoBehaviour
                     SettingsCloseButton.GetComponent<Image>().sprite = StartButtonUP;
                 }
 
-                if (RayHitInfo.collider.tag == "OVRResetPanel")
+                if (RayHitInfo.collider.tag == "OVRResetSettings")
                 {
                     SettingsPanel.SetActive(false);
                     SettingsButton.GetComponent<Image>().sprite = StartButtonUP;
@@ -107,19 +114,35 @@ public class OVRMenu : MonoBehaviour
                     }
                 }
 
-                if (RayHitInfo.collider.tag == "Quit")
+                if (RayHitInfo.collider.tag == "OVRQuit")
                 {
                     Debug.Log("Quit Sucessfully");
-                  //  Application.Quit();
+                   Application.Quit();
                 }
 
                 
             }
         }
 
+        LR.SetPosition(0, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.0045f));
 
-      
-    
+        if (Physics.Raycast(transform.position, forward, out RayHitInfo, Mathf.Infinity))
+        {
+           //var clone = Instantiate(Blast, RayHitInfo.point, transform.rotation);
+            //Destroy(clone, 1f);
+            if (RayHitInfo.collider)
+            {
+               
+               
+                LR.SetPosition(1, RayHitInfo.point);
+            }
+
+        }
+        else
+        {
+            LR.SetPosition(1, forward * 50);
+        }
+
     }
 
 

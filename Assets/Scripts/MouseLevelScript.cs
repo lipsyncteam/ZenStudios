@@ -105,7 +105,7 @@ public class MouseLevelScript : MonoBehaviour {
             }
         }
 
-        Debug.DrawRay(OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTrackedRemote),transform.forward);
+        Debug.DrawRay(DrawPlaceBrush.transform.position, transform.forward,Color.green);
 
         if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, 10000f))
         {
