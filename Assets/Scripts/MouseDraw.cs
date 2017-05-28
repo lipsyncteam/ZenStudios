@@ -27,7 +27,7 @@ public class MouseDraw : MonoBehaviour
                     GetComponent<TrailRenderer>().enabled = true;
                     RayHitInfo.collider.gameObject.SetActive(false);
                 }
-               
+
             }
 
             if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, 2.38f))
@@ -39,27 +39,55 @@ public class MouseDraw : MonoBehaviour
                 }
                 else
                 {
-                   // ResetLineRenderer();
+                    // ResetLineRenderer();
                 }
 
             }
-          
 
-           
+
+
 
         }
-        else 
+        else
         {
-          //ResetLineRenderer();
+            //ResetLineRenderer();
         }
-        
-        
-        Debug.DrawRay(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward,Color.green);
 
-       
 
+        Debug.DrawRay(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, Color.green);
+        if (Input.GetMouseButton(0))
+        {
+            if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, Mathf.Infinity))
+            {
+                if (RayHitInfo.collider.tag == "CC" + HitCollision.CCcount)
+                {
+
+                    HitCollision.CCName = RayHitInfo.collider.tag;
+                    HitCollision.HitBrush = true;
+                }
+                else
+                {
+                    HitCollision.HitBrush = false;
+
+
+                }
+
+                if (RayHitInfo.collider.tag == "ResetColor")
+                {
+                    HitCollision.ResetColor = true;
+                }
+                else
+                {
+                    HitCollision.ResetColor = false;
+                }
+                //Debug.Log(RayHitInfo.collider.tag);
+            }
+
+
+
+
+        }
     }
-
 
     private void ResetLineRenderer()
     {

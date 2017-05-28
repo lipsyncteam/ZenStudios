@@ -41,17 +41,7 @@ public class MusicScript : MonoBehaviour {
 
 		}
 
-        if (OVRInput.Get(OVRInput.Button.PrimaryTouchpad))
-        {
-            if (SceneManager.GetActiveScene().name == "GearVrControllerTest")
-            {
-                SceneManager.LoadScene("ZenStudiosMainMenu");
-            }
-            else
-            {
-                SceneManager.LoadScene("GearVrControllerTest");
-            }
-        }
+      
 
     }
 	

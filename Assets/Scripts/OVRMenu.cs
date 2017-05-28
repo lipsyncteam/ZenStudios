@@ -8,11 +8,8 @@ using UnityEngine.VR;
 public class OVRMenu : MonoBehaviour
 {
 
-    private LineRenderer LR;
-    public RaycastHit RayHitInfo;
-    public GameObject Blast;
    
-  
+    public RaycastHit RayHitInfo;
     public GameObject progressBar;
     public Image progressBar_Image;
     AsyncOperation async;
@@ -39,8 +36,6 @@ public class OVRMenu : MonoBehaviour
         if (PlayerPrefs.GetInt("Mute", 0) == 1)
         {
             MusicToggle.isOn = false;
-
-
         }
 
         else if (PlayerPrefs.GetInt("Mute", 0) == 0)
@@ -48,9 +43,6 @@ public class OVRMenu : MonoBehaviour
 
             MusicToggle.isOn = true;
         }
-
-        LR = GetComponent<LineRenderer>();
-        LR.SetPosition(0, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.0045f));
 
     }
 
@@ -74,11 +66,6 @@ public class OVRMenu : MonoBehaviour
             
             if (Physics.Raycast(transform.position, forward, out RayHitInfo, Mathf.Infinity))
             {
-                ///
-               
-              
-
-                //
                 if (RayHitInfo.collider.tag == "OVRStart")
                 {
                     StartButton.GetComponent<Image>().sprite = StartButtonPressed;
@@ -124,25 +111,7 @@ public class OVRMenu : MonoBehaviour
             }
         }
 
-        LR.SetPosition(0, new Vector3(transform.position.x, transform.position.y, transform.position.z + 0.0045f));
-
-        if (Physics.Raycast(transform.position, forward, out RayHitInfo, Mathf.Infinity))
-        {
-           //var clone = Instantiate(Blast, RayHitInfo.point, transform.rotation);
-            //Destroy(clone, 1f);
-            if (RayHitInfo.collider)
-            {
-               
-               
-                LR.SetPosition(1, RayHitInfo.point);
-            }
-
-        }
-        else
-        {
-            LR.SetPosition(1, forward * 50);
-        }
-
+        
     }
 
 
