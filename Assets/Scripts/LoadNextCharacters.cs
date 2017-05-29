@@ -7,21 +7,27 @@ public class LoadNextCharacters : MonoBehaviour
 
     public GameObject[] Characters;
     public GameObject StartBlast;
-	void Start ()
+    public static int LevelNameCount;
+	void Awake ()
     {
-        Characters[0].SetActive(false);
+        LoadingCharacterStart(LevelNameCount);
+
+    }
+	
+	void LoadingCharacterStart(int LevelNameCount)
+    {
+        Characters[LevelNameCount].SetActive(false);
         Invoke("PlayAfterSeconds", 2f);
-	}
+    }
 	
-	
-	void Update ()
-    {
-		
-	}
 
     void PlayAfterSeconds()
     {
-        Instantiate(StartBlast, Characters[0].transform.position, Quaternion.identity);
-        Characters[0].SetActive(true);
+        var clone = Instantiate(StartBlast, Characters[0].transform.position, Quaternion.identity);
+        Destroy(clone, 2f);
+        Characters[LevelNameCount].SetActive(true);
+        LevelNameCount++;
+        gameObject.SetActive(false);
+        LevelNameCount++;
     }
 }

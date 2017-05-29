@@ -11,7 +11,7 @@ public class CharactersCompletion : MonoBehaviour
     public GameObject CharacterBeforeEffect,StrokesImage;
     public BoxCollider[] Box_Coll;
     public Image[] CharacterColor;
-
+    public GameObject LoadNextCharacter;
    
     bool OncePlayed;
     void Start ()
@@ -20,6 +20,8 @@ public class CharactersCompletion : MonoBehaviour
         OncePlayed = false;
         CharctersRight.enabled = false;
         StrokesImage.SetActive(true);
+        
+      
     }
 
     void ColorCharacter()
@@ -99,7 +101,7 @@ public class CharactersCompletion : MonoBehaviour
         //
 
         if (Box_Coll[25].enabled == false)
-            CharacterColor[8].fillAmount = 0.5f;
+            CharacterColor[8].fillAmount = 0.271f;
         if (Box_Coll[26].enabled == false)
             CharacterColor[8].fillAmount = 1f;
         //
@@ -124,37 +126,31 @@ public class CharactersCompletion : MonoBehaviour
     void Update ()
     {
         if (HitCollision.ResetColor == true)
-            ResetCharacter();
-
-
+           ResetCharacter();
         if (Box_Coll[26].enabled == false && OncePlayed == false)
         {
             OncePlayed = true;
             Invoke("CharacterBeforeEffectFunc", 0.2f);
-            Invoke("ShowCharacterImage", 1f);
+            Invoke("ShowCharacterImage", 0.7f);
         }
 
-       if(HitCollision.HitBrush == true)
-        {
-            if (Box_Coll[HitCollision.CCcount].enabled == true)
+       
+            if (HitCollision.HitBrush == true && Box_Coll[HitCollision.CCcount].enabled == true)
             {
                 Box_Coll[HitCollision.CCcount].enabled = false;
                 ColorCharacter();
                 if (Box_Coll[HitCollision.CCcount].enabled == false)
                 {
                     HitCollision.CCcount++;
-
                 }
             }
-        }
-
-        //Debug.Log(Box_Coll.Length);
-        Debug.Log(HitCollision.CCcount);
+        
+       
     }
 
     void CharacterBeforeEffectFunc()
     {
-        var clone = Instantiate(CharacterBeforeEffect, transform.position, Quaternion.identity);
+        GameObject clone = Instantiate(CharacterBeforeEffect, Box_Coll[13].transform.position, Quaternion.identity);
         Destroy(clone, 1f);
     }
 
@@ -162,10 +158,13 @@ public class CharactersCompletion : MonoBehaviour
     {
         Character.GetComponent<Image>().sprite = CharacterImage;
         CharctersRight.enabled = true;
-
         //Reset
-        OncePlayed = false;
-
+        //OncePlayed = false;
         StrokesImage.SetActive(false);
+
+       // LoadNextCharacter.SetActive(true);
+
     }
+
+  
 }

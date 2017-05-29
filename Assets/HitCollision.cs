@@ -12,7 +12,7 @@ public class HitCollision : MonoBehaviour {
     public static bool ResetColor;
     void Start ()
     {
-        CCName = null; 
+        CCName = null;
         CCcount = 0;
         HitBrush = false;
         ResetColor = false;
@@ -46,6 +46,11 @@ public class HitCollision : MonoBehaviour {
                 {
                     ResetColor = false;
                 }
+
+            }
+            else
+            {
+                HitBrush = false;
 
             }
         }        

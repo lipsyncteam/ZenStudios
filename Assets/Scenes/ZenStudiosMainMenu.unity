@@ -1094,12 +1094,12 @@ Prefab:
     - target: {fileID: 114759847930634912, guid: d8fa8dcc08feff947b7ed63dcf098a08,
         type: 2}
       propertyPath: LaserSpaceFromOrgin
-      value: 0.0045
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114216894221407588, guid: d8fa8dcc08feff947b7ed63dcf098a08,
         type: 2}
       propertyPath: LaserSpaceFromOrgin
-      value: 0.0045
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 120021287705898206, guid: d8fa8dcc08feff947b7ed63dcf098a08,
         type: 2}

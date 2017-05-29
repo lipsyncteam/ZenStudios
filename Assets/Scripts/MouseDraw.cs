@@ -8,31 +8,28 @@ public class MouseDraw : MonoBehaviour
 
     public GameObject DrawPlaceBrush;
     public RaycastHit RayHitInfo;
+
+    void Start()
+    {
+        HitCollision.CCName = null;
+        HitCollision.CCcount = 0;
+        HitCollision.HitBrush = false;
+        HitCollision.ResetColor = false;
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(DrawPlaceBrush.transform.position, 0.2f);
+        Gizmos.DrawSphere(DrawPlaceBrush.transform.position, Mathf.Infinity);
     }
     void MouseDrawFunc()
     {
 
         if (Input.GetMouseButton(0))
-        {
-
-            if (Physics.SphereCast(DrawPlaceBrush.transform.position, 10f, DrawPlaceBrush.transform.forward, out RayHitInfo, 1000f))
+        {         
+            if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, Mathf.Infinity))
             {
-                if (RayHitInfo.collider.tag == "CharacterCollides")
-                {
-                    this.transform.position = RayHitInfo.point;
-                    GetComponent<TrailRenderer>().enabled = true;
-                    RayHitInfo.collider.gameObject.SetActive(false);
-                }
-
-            }
-
-            if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, 2.38f))
-            {
-                if (RayHitInfo.collider.tag == "Scroll")
+                if (RayHitInfo.collider)
                 {
                     this.transform.position = RayHitInfo.point;
                     GetComponent<TrailRenderer>().enabled = true;
@@ -41,12 +38,7 @@ public class MouseDraw : MonoBehaviour
                 {
                     // ResetLineRenderer();
                 }
-
             }
-
-
-
-
         }
         else
         {
@@ -54,22 +46,19 @@ public class MouseDraw : MonoBehaviour
         }
 
 
-        Debug.DrawRay(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, Color.green);
+        Debug.DrawRay(transform.position,transform.forward, Color.green);
         if (Input.GetMouseButton(0))
         {
             if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, Mathf.Infinity))
             {
                 if (RayHitInfo.collider.tag == "CC" + HitCollision.CCcount)
                 {
-
                     HitCollision.CCName = RayHitInfo.collider.tag;
                     HitCollision.HitBrush = true;
                 }
                 else
                 {
                     HitCollision.HitBrush = false;
-
-
                 }
 
                 if (RayHitInfo.collider.tag == "ResetColor")
@@ -80,7 +69,11 @@ public class MouseDraw : MonoBehaviour
                 {
                     HitCollision.ResetColor = false;
                 }
-                //Debug.Log(RayHitInfo.collider.tag);
+
+            }
+            else
+            {
+                HitCollision.HitBrush = false;
             }
 
 
