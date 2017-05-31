@@ -46,6 +46,40 @@ TagManager:
   - CC25
   - CC26
   - ResetColor
+  - CC27
+  - CC28
+  - CC29
+  - CC30
+  - CC31
+  - CC32
+  - CC33
+  - CC34
+  - CC35
+  - CC36
+  - CC37
+  - CC38
+  - CC39
+  - CC40
+  - CC41
+  - CC42
+  - CC43
+  - CC44
+  - CC45
+  - CC46
+  - CC47
+  - CC48
+  - CC49
+  - CC50
+  - CC51
+  - CC52
+  - CC53
+  - CC54
+  - CC55
+  - CC56
+  - CC57
+  - CC58
+  - CC59
+  - CC60
   layers:
   - Default
   - TransparentFX

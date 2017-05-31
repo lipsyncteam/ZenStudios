@@ -51,6 +51,7 @@ public class MouseDraw : MonoBehaviour
         {
             if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, Mathf.Infinity))
             {
+
                 if (RayHitInfo.collider.tag == "CC" + HitCollision.CCcount)
                 {
                     HitCollision.CCName = RayHitInfo.collider.tag;
@@ -79,6 +80,21 @@ public class MouseDraw : MonoBehaviour
 
 
 
+        }
+        else
+        {
+            if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, Mathf.Infinity))
+            {
+                if (RayHitInfo.collider.tag == "ResetColor")
+                {
+                    HitCollision.ResetColor = true;
+                  
+                }
+                else
+                {
+                    HitCollision.ResetColor = false;
+                }
+            }
         }
     }
 
