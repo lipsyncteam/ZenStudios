@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharactersCompletion : MonoBehaviour
+public class CatCompletionScript : MonoBehaviour
 {
     public Image Character, CharctersRight;
-    public Sprite CharactersInChinese,CharacterImage;
-    
-    public GameObject CharacterBeforeEffect,StrokesImage;
+    public Sprite CharactersInChinese, CharacterImage;
+
+    public GameObject CharacterBeforeEffect, StrokesImage;
     public SphereCollider[] Box_Coll;
     public Image[] CharacterColor;
-    public GameObject LoadNextCharacter,TopGameObjectOfCharacter;
+    public GameObject LoadNextCharacter, TopGameObjectOfCharacter;
     public int LastElement;
     bool OncePlayed;
     public AudioSource Music;
@@ -41,29 +41,29 @@ public class CharactersCompletion : MonoBehaviour
 
     void ColorCharacter()
     {
-        if(Box_Coll[0].enabled == false)
+        if (Box_Coll[0].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[0];
 
-         if (Box_Coll[1].enabled == false)
+        if (Box_Coll[1].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[1];
 
-         if (Box_Coll[2].enabled == false)
+        if (Box_Coll[2].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[2];
-         
 
-         if (Box_Coll[3].enabled == false)
+
+        if (Box_Coll[3].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[3];
 
-         if (Box_Coll[4].enabled == false)
+        if (Box_Coll[4].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[4];
 
-         if (Box_Coll[5].enabled == false)
+        if (Box_Coll[5].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[5];
 
-         if (Box_Coll[6].enabled == false)
+        if (Box_Coll[6].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[6];
-         ///
-         if (Box_Coll[7].enabled == false)
+        ///
+        if (Box_Coll[7].enabled == false)
             CharacterColor[1].fillAmount = ColliderScaleBrush[7];
         if (Box_Coll[8].enabled == false)
             CharacterColor[1].fillAmount = ColliderScaleBrush[8];
@@ -118,7 +118,7 @@ public class CharactersCompletion : MonoBehaviour
             CharacterColor[3].fillAmount = ColliderScaleBrush[31];
         if (Box_Coll[32].enabled == false)
             CharacterColor[3].fillAmount = ColliderScaleBrush[32];
-        
+
         if (Box_Coll[33].enabled == false)
             CharacterColor[3].fillAmount = ColliderScaleBrush[33];
         /////
@@ -131,65 +131,67 @@ public class CharactersCompletion : MonoBehaviour
             CharacterColor[4].fillAmount = ColliderScaleBrush[36];
         if (Box_Coll[37].enabled == false)
             CharacterColor[4].fillAmount = ColliderScaleBrush[37];
-        //
+        /////////////////////
         if (Box_Coll[38].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[38];
+            CharacterColor[5].fillAmount = ColliderScaleBrush[38];
         if (Box_Coll[39].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[39];
-        
+            CharacterColor[5].fillAmount = ColliderScaleBrush[39];
+
         if (Box_Coll[40].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[40];
+            CharacterColor[5].fillAmount = ColliderScaleBrush[40];
         if (Box_Coll[41].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[41];
+            CharacterColor[5].fillAmount = ColliderScaleBrush[41];
         if (Box_Coll[42].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[42];
+            CharacterColor[5].fillAmount = ColliderScaleBrush[42];
         ////////
 
         if (Box_Coll[43].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[43];
+            CharacterColor[6].fillAmount = ColliderScaleBrush[43];
         if (Box_Coll[44].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[44];
+            CharacterColor[6].fillAmount = ColliderScaleBrush[44];
         if (Box_Coll[45].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[45];
+            CharacterColor[6].fillAmount = ColliderScaleBrush[45];
         if (Box_Coll[46].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[46];
+            CharacterColor[6].fillAmount = ColliderScaleBrush[46];
+        //////////////////
         if (Box_Coll[47].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[47];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[47];
         if (Box_Coll[48].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[48];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[48];
         if (Box_Coll[49].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[49];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[49];
         if (Box_Coll[50].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[50];
-        //////////////////////////////////////////////
+            CharacterColor[7].fillAmount = ColliderScaleBrush[50];
+        
         if (Box_Coll[51].enabled == false)
-            CharacterColor[6].fillAmount = ColliderScaleBrush[51];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[51];
         if (Box_Coll[52].enabled == false)
-            CharacterColor[6].fillAmount = ColliderScaleBrush[52];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[52];
         if (Box_Coll[53].enabled == false)
-            CharacterColor[6].fillAmount = ColliderScaleBrush[53];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[53];
         //////////////////
         if (Box_Coll[54].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[54];
+            CharacterColor[8].fillAmount = ColliderScaleBrush[54];
         if (Box_Coll[55].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[55];
+            CharacterColor[8].fillAmount = ColliderScaleBrush[55];
+        ////////////////
         if (Box_Coll[56].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[56];
+            CharacterColor[9].fillAmount = ColliderScaleBrush[56];
         if (Box_Coll[57].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[57];
+            CharacterColor[9].fillAmount = ColliderScaleBrush[57];
         if (Box_Coll[58].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[58];
+            CharacterColor[9].fillAmount = ColliderScaleBrush[58];
         ////////
 
         if (Box_Coll[59].enabled == false)
-            CharacterColor[8].fillAmount = ColliderScaleBrush[59];
+            CharacterColor[10].fillAmount = ColliderScaleBrush[59];
         if (Box_Coll[60].enabled == false)
-            CharacterColor[8].fillAmount = ColliderScaleBrush[60];
+            CharacterColor[10].fillAmount = ColliderScaleBrush[60];
     }
 
     void ResetCharacter()
     {
-        foreach(var boxColl in Box_Coll)
+        foreach (var boxColl in Box_Coll)
         {
             boxColl.enabled = true;
         }
@@ -203,29 +205,29 @@ public class CharactersCompletion : MonoBehaviour
         HitCollision.ResetColor = false;
     }
 
-    void Update ()
+    void Update()
     {
         //if (HitCollision.ResetColor == true)
-          // ResetCharacter();
+        // ResetCharacter();
         if (Box_Coll[LastElement].enabled == false && OncePlayed == false)
         {
             OncePlayed = true;
-           Invoke("CharacterBeforeEffectFunc", 0.2f);
+            Invoke("CharacterBeforeEffectFunc", 0.2f);
             Invoke("ShowCharacterImage", 0.7f);
-       }
+        }
 
-       
-            if (HitCollision.HitBrush == true && Box_Coll[HitCollision.CCcount].enabled == true)
+
+        if (HitCollision.HitBrush == true && Box_Coll[HitCollision.CCcount].enabled == true)
+        {
+            Box_Coll[HitCollision.CCcount].enabled = false;
+            ColorCharacter();
+            if (Box_Coll[HitCollision.CCcount].enabled == false)
             {
-                Box_Coll[HitCollision.CCcount].enabled = false;
-                ColorCharacter();
-                if (Box_Coll[HitCollision.CCcount].enabled == false)
-                {
-                    HitCollision.CCcount++;
-                }
+                HitCollision.CCcount++;
             }
-        
-       
+        }
+
+
     }
 
     void CharacterBeforeEffectFunc()
@@ -243,8 +245,8 @@ public class CharactersCompletion : MonoBehaviour
         StrokesImage.SetActive(false);
         Music.clip = WinningSound;
         Music.Play();
-       
-        
+
+        print(LoadNextCharacters.LevelNameCount);
         Invoke("AfterFourSecs", 4f);
     }
 
@@ -254,5 +256,7 @@ public class CharactersCompletion : MonoBehaviour
         LoadNextCharacter.SetActive(true);
         TopGameObjectOfCharacter.SetActive(false);
         LoadNextCharacters.LevelNameCount++;
+        if (LoadNextCharacters.LevelNameCount == 2)
+            LoadNextCharacters.LevelNameCount = 0;
     }
 }
