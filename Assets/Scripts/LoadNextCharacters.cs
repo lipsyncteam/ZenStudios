@@ -13,7 +13,7 @@ public class LoadNextCharacters : MonoBehaviour
     int randomNumber;
 	void OnEnable ()
     {
-        randomNumber = Random.Range(0, 4);
+        randomNumber = Random.Range(0, 5);
         OffUpdate = true;
     }
 	
@@ -27,8 +27,9 @@ public class LoadNextCharacters : MonoBehaviour
     {
         if(OffUpdate == true)
         {
-            LoadingCharacterStart(LevelNameCount);
             OffUpdate = false;
+            LoadingCharacterStart(LevelNameCount);
+           
         }
     }
 

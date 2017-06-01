@@ -256,7 +256,8 @@ public class CatCompletionScript : MonoBehaviour
         LoadNextCharacter.SetActive(true);
         TopGameObjectOfCharacter.SetActive(false);
         LoadNextCharacters.LevelNameCount++;
-        if (LoadNextCharacters.LevelNameCount == 2)
+
+        if (LoadNextCharacters.LevelNameCount == 5)
             LoadNextCharacters.LevelNameCount = 0;
     }
 }

@@ -254,5 +254,8 @@ public class CharactersCompletion : MonoBehaviour
         LoadNextCharacter.SetActive(true);
         TopGameObjectOfCharacter.SetActive(false);
         LoadNextCharacters.LevelNameCount++;
+
+        if (LoadNextCharacters.LevelNameCount == 5)
+            LoadNextCharacters.LevelNameCount = 0;
     }
 }
