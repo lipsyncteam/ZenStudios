@@ -55,6 +55,7 @@ public class HitCollision : MonoBehaviour {
             }
         }else
         {
+            HitBrush = false;
             if (Physics.Raycast(transform.position, forward, out RayHitInfo, Mathf.Infinity))
             {
                 if (RayHitInfo.collider.tag == "ResetColor")

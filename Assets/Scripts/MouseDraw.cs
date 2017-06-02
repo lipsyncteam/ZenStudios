@@ -83,6 +83,7 @@ public class MouseDraw : MonoBehaviour
         }
         else
         {
+            HitCollision.HitBrush = false;
             if (Physics.Raycast(DrawPlaceBrush.transform.position, DrawPlaceBrush.transform.forward, out RayHitInfo, Mathf.Infinity))
             {
                 if (RayHitInfo.collider.tag == "ResetColor")
