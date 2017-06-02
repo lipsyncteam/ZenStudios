@@ -41,150 +41,56 @@ public class CharactersCompletion : MonoBehaviour
 
     void ColorCharacter()
     {
-        if(Box_Coll[0].enabled == false)
+        if (Box_Coll[0].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[0];
 
-         if (Box_Coll[1].enabled == false)
+        if (Box_Coll[1].enabled == false)
             CharacterColor[0].fillAmount = ColliderScaleBrush[1];
 
-         if (Box_Coll[2].enabled == false)
-            CharacterColor[0].fillAmount = ColliderScaleBrush[2];
-         
+        if (Box_Coll[2].enabled == false)
+            CharacterColor[1].fillAmount = ColliderScaleBrush[2];
 
-         if (Box_Coll[3].enabled == false)
-            CharacterColor[0].fillAmount = ColliderScaleBrush[3];
 
-         if (Box_Coll[4].enabled == false)
-            CharacterColor[0].fillAmount = ColliderScaleBrush[4];
+        if (Box_Coll[3].enabled == false)
+            CharacterColor[1].fillAmount = ColliderScaleBrush[3];
 
-         if (Box_Coll[5].enabled == false)
-            CharacterColor[0].fillAmount = ColliderScaleBrush[5];
+        if (Box_Coll[4].enabled == false)
+            CharacterColor[2].fillAmount = ColliderScaleBrush[4];
 
-         if (Box_Coll[6].enabled == false)
-            CharacterColor[0].fillAmount = ColliderScaleBrush[6];
-         ///
-         if (Box_Coll[7].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[7];
+        if (Box_Coll[5].enabled == false)
+            CharacterColor[2].fillAmount = ColliderScaleBrush[5];
+
+        if (Box_Coll[6].enabled == false)
+            CharacterColor[3].fillAmount = ColliderScaleBrush[6];
+        if (Box_Coll[7].enabled == false)
+            CharacterColor[3].fillAmount = ColliderScaleBrush[7];
+
         if (Box_Coll[8].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[8];
+            CharacterColor[4].fillAmount = ColliderScaleBrush[8];
         if (Box_Coll[9].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[9];
+            CharacterColor[4].fillAmount = ColliderScaleBrush[9];
+
         if (Box_Coll[10].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[10];
+            CharacterColor[5].fillAmount = ColliderScaleBrush[10];
         if (Box_Coll[11].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[11];
+            CharacterColor[5].fillAmount = ColliderScaleBrush[11];
+
         if (Box_Coll[12].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[12];
+            CharacterColor[6].fillAmount = ColliderScaleBrush[12];
+
         if (Box_Coll[13].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[13];
+            CharacterColor[6].fillAmount = ColliderScaleBrush[13];
+
         if (Box_Coll[14].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[14];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[14];
         if (Box_Coll[15].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[15];
+            CharacterColor[7].fillAmount = ColliderScaleBrush[15];
+
         if (Box_Coll[16].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[16];
+            CharacterColor[8].fillAmount = ColliderScaleBrush[16];
         if (Box_Coll[17].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[17];
-        if (Box_Coll[18].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[18];
-        if (Box_Coll[19].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[19];
-        if (Box_Coll[20].enabled == false)
-            CharacterColor[1].fillAmount = ColliderScaleBrush[20];
+            CharacterColor[8].fillAmount = ColliderScaleBrush[17];
 
-        ////////
-        if (Box_Coll[21].enabled == false)
-            CharacterColor[2].fillAmount = ColliderScaleBrush[21];
-        if (Box_Coll[22].enabled == false)
-            CharacterColor[2].fillAmount = ColliderScaleBrush[22];
-        if (Box_Coll[23].enabled == false)
-            CharacterColor[2].fillAmount = ColliderScaleBrush[23];
-        if (Box_Coll[24].enabled == false)
-            CharacterColor[2].fillAmount = ColliderScaleBrush[24];
-        if (Box_Coll[25].enabled == false)
-            CharacterColor[2].fillAmount = ColliderScaleBrush[25];
-        if (Box_Coll[26].enabled == false)
-            CharacterColor[2].fillAmount = ColliderScaleBrush[26];
-        /////
-        if (Box_Coll[27].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[27];
-        if (Box_Coll[28].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[28];
-        if (Box_Coll[29].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[29];
-        if (Box_Coll[30].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[30];
-        if (Box_Coll[31].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[31];
-        if (Box_Coll[32].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[32];
-        
-        if (Box_Coll[33].enabled == false)
-            CharacterColor[3].fillAmount = ColliderScaleBrush[33];
-        /////
-
-        if (Box_Coll[34].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[34];
-        if (Box_Coll[35].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[35];
-        if (Box_Coll[36].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[36];
-        if (Box_Coll[37].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[37];
-        //
-        if (Box_Coll[38].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[38];
-        if (Box_Coll[39].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[39];
-        
-        if (Box_Coll[40].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[40];
-        if (Box_Coll[41].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[41];
-        if (Box_Coll[42].enabled == false)
-            CharacterColor[4].fillAmount = ColliderScaleBrush[42];
-        ////////
-
-        if (Box_Coll[43].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[43];
-        if (Box_Coll[44].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[44];
-        if (Box_Coll[45].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[45];
-        if (Box_Coll[46].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[46];
-        if (Box_Coll[47].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[47];
-        if (Box_Coll[48].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[48];
-        if (Box_Coll[49].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[49];
-        if (Box_Coll[50].enabled == false)
-            CharacterColor[5].fillAmount = ColliderScaleBrush[50];
-        //////////////////////////////////////////////
-        if (Box_Coll[51].enabled == false)
-            CharacterColor[6].fillAmount = ColliderScaleBrush[51];
-        if (Box_Coll[52].enabled == false)
-            CharacterColor[6].fillAmount = ColliderScaleBrush[52];
-        if (Box_Coll[53].enabled == false)
-            CharacterColor[6].fillAmount = ColliderScaleBrush[53];
-        //////////////////
-        if (Box_Coll[54].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[54];
-        if (Box_Coll[55].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[55];
-        if (Box_Coll[56].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[56];
-        if (Box_Coll[57].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[57];
-        if (Box_Coll[58].enabled == false)
-            CharacterColor[7].fillAmount = ColliderScaleBrush[58];
-        ////////
-
-        if (Box_Coll[59].enabled == false)
-            CharacterColor[8].fillAmount = ColliderScaleBrush[59];
-        if (Box_Coll[60].enabled == false)
-            CharacterColor[8].fillAmount = ColliderScaleBrush[60];
     }
 
     void ResetCharacter()
