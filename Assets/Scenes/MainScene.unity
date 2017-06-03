@@ -3022,7 +3022,7 @@ MonoBehaviour:
   TopGameObjectOfCharacter: {fileID: 500588116}
   LastElement: 17
   Music: {fileID: 0}
-  WinningSound: {fileID: 8300000, guid: b2b014de2e595434db7e9db59000d2b3, type: 3}
+  WinningSound: {fileID: 8300000, guid: 0a8e9d1997a24654e962963f33daac2a, type: 3}
   ColliderScaleBrush:
   - 0.5
   - 1
@@ -7220,7 +7220,7 @@ MonoBehaviour:
   TopGameObjectOfCharacter: {fileID: 1117695638}
   LastElement: 15
   Music: {fileID: 0}
-  WinningSound: {fileID: 8300000, guid: b2b014de2e595434db7e9db59000d2b3, type: 3}
+  WinningSound: {fileID: 8300000, guid: 0a8e9d1997a24654e962963f33daac2a, type: 3}
   ColliderScaleBrush:
   - 0.5
   - 1
@@ -9636,7 +9636,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -10034,7 +10034,7 @@ MonoBehaviour:
   TopGameObjectOfCharacter: {fileID: 2093153742}
   LastElement: 17
   Music: {fileID: 0}
-  WinningSound: {fileID: 8300000, guid: b2b014de2e595434db7e9db59000d2b3, type: 3}
+  WinningSound: {fileID: 8300000, guid: 0a8e9d1997a24654e962963f33daac2a, type: 3}
   ColliderScaleBrush:
   - 0.5
   - 1
@@ -11740,7 +11740,7 @@ MonoBehaviour:
   TopGameObjectOfCharacter: {fileID: 444553659}
   LastElement: 21
   Music: {fileID: 0}
-  WinningSound: {fileID: 8300000, guid: b2b014de2e595434db7e9db59000d2b3, type: 3}
+  WinningSound: {fileID: 8300000, guid: 0a8e9d1997a24654e962963f33daac2a, type: 3}
   ColliderScaleBrush:
   - 0.5
   - 1
@@ -12777,7 +12777,7 @@ MonoBehaviour:
   TopGameObjectOfCharacter: {fileID: 1618773645}
   LastElement: 15
   Music: {fileID: 0}
-  WinningSound: {fileID: 8300000, guid: b2b014de2e595434db7e9db59000d2b3, type: 3}
+  WinningSound: {fileID: 8300000, guid: 0a8e9d1997a24654e962963f33daac2a, type: 3}
   ColliderScaleBrush:
   - 0.5
   - 1
@@ -13107,7 +13107,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 2
@@ -16472,7 +16472,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 1

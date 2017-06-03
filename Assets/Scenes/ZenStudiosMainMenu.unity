@@ -1211,6 +1211,26 @@ Prefab:
       propertyPath: m_UseWorldSpace
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20319971062851488, guid: d8fa8dcc08feff947b7ed63dcf098a08,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20319971062851488, guid: d8fa8dcc08feff947b7ed63dcf098a08,
+        type: 2}
+      propertyPath: m_RenderingPath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20620228440229598, guid: d8fa8dcc08feff947b7ed63dcf098a08,
+        type: 2}
+      propertyPath: m_RenderingPath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20864950472222524, guid: d8fa8dcc08feff947b7ed63dcf098a08,
+        type: 2}
+      propertyPath: m_RenderingPath
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8fa8dcc08feff947b7ed63dcf098a08, type: 2}
   m_IsPrefabParent: 0
