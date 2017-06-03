@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TeaCompletion : MonoBehaviour
 {
-    public Image Character, CharctersRight;
+    public Image Character, CharctersRight, HintCharacter;
     public Sprite CharactersInChinese, CharacterImage;
 
     public GameObject CharacterBeforeEffect, StrokesImage;
@@ -37,6 +37,7 @@ public class TeaCompletion : MonoBehaviour
 
         }
         ResetCharacter();
+        HintCharacter.enabled = true;
     }
 
     void ColorCharacter()
@@ -142,6 +143,7 @@ public class TeaCompletion : MonoBehaviour
 
     void ShowCharacterImage()
     {
+        HintCharacter.enabled = false;
         Character.GetComponent<Image>().sprite = CharacterImage;
         CharctersRight.enabled = true;
         //Reset
