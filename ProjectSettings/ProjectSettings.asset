@@ -223,7 +223,8 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: 7c1e8e231e1cd7a4881a485698528dc0, type: 3}
-  AndroidKeystoreName: W:/Zen Studio key/Chinese Language Learning.keystore
+  AndroidKeystoreName: C:/Users/DESERTEAGLE/Desktop/LipSync_Asset/Chinese Language
+    Learning.keystore
   AndroidKeyaliasName: zenstudios
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
