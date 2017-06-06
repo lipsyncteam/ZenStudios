@@ -14,9 +14,11 @@ public class TeaCompletion : MonoBehaviour
     public GameObject LoadNextCharacter, TopGameObjectOfCharacter;
     public int LastElement;
     bool OncePlayed;
-    public AudioSource Music;
-    public AudioClip WinningSound;
+	public AudioSource Music,CharacterSoundPlayer;
+	public AudioClip WinningSound,CharacterNameSound;
     public float[] ColliderScaleBrush;
+
+	public GameObject CharacterText;
     void OnEnable()
     {
         Character.GetComponent<Image>().sprite = CharactersInChinese;
@@ -25,19 +27,23 @@ public class TeaCompletion : MonoBehaviour
         StrokesImage.SetActive(true);
 
         Music = GetComponent<AudioSource>();
-        if (PlayerPrefs.GetInt("Mute") == 1)
-        {
-            Music.volume = 0.0f;
+		CharacterSoundPlayer = gameObject.AddComponent<AudioSource> ();
+		CharacterSoundPlayer.playOnAwake = false;
+		if (PlayerPrefs.GetInt("Mute") == 1)
+		{
+			Music.volume = 0.0f;
+			CharacterSoundPlayer.volume = 0.0f;
+		}
 
-        }
-
-        else if (PlayerPrefs.GetInt("Mute") == 0)
-        {
-            Music.volume = 1f;
-
-        }
+		else if (PlayerPrefs.GetInt("Mute") == 0)
+		{
+			Music.volume = 1f;
+			CharacterSoundPlayer.volume = .7f;
+		}
         ResetCharacter();
         HintCharacter.enabled = true;
+
+		CharacterText.SetActive (false);
     }
 
     void ColorCharacter()
@@ -118,6 +124,8 @@ public class TeaCompletion : MonoBehaviour
         {
             OncePlayed = true;
             Invoke("CharacterBeforeEffectFunc", 0.2f);
+			Music.clip = WinningSound;
+			Music.Play();
             Invoke("ShowCharacterImage", 0.7f);
         }
 
@@ -149,12 +157,21 @@ public class TeaCompletion : MonoBehaviour
         //Reset
         //OncePlayed = false;
         StrokesImage.SetActive(false);
-        Music.clip = WinningSound;
-        Music.Play();
+      
+
+
 
         print(LoadNextCharacters.LevelNameCount);
         Invoke("AfterFourSecs", 4f);
+		Invoke("AfterTwoSecs", 3f);
+		CharacterText.SetActive (true);
     }
+
+	void AfterTwoSecs()
+	{
+		CharacterSoundPlayer.clip = CharacterNameSound;
+		CharacterSoundPlayer.Play();
+	}
 
     void AfterFourSecs()
     {
